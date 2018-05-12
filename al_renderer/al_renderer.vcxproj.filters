@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="common">
+      <UniqueIdentifier>{d42baf8d-d9e7-4989-84b5-e2be5964fc4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{625a43f6-a7d4-42bb-bfad-48307e66dbeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{75734771-29a7-4845-badf-1f609b5cb095}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="win32">
+      <UniqueIdentifier>{541418ee-dd9f-455c-b6ac-b22b70be8912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="graphics">
+      <UniqueIdentifier>{aa69136a-72b4-4bfd-bfe6-75dc1c7257e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{87877314-b735-476d-9853-1c69e131142a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="shaders\basic.hlsl">
+      <Filter>shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="shaders\ui.hlsl">
+      <Filter>shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="common\job_system.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="win32app.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics.cpp">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="common\text_buf.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\input.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="graphics\imgui_render.cpp">
+      <Filter>graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="common\basictypes.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\tagged_heap.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dx_sample_helper.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="common\assertions.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\basictypes.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\constants.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\d3dx12.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\hlsltypes.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\job_system.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Win32Project1\Resource.h" />
+    <ClInclude Include="win32app.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="render_resources.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="common\text_buf.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\input.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="type_funcs.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\stb_rect_pack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\stb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\stb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="graphics\imgui_render.h">
+      <Filter>graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="common\util.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\tagged_heap.h">
+      <Filter>common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\Win32Project1\Win32Project1.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Win32Project1\small.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Win32Project1\Win32Project1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgui\README.md">
+      <Filter>imgui</Filter>
+    </None>
+  </ItemGroup>
+</Project>

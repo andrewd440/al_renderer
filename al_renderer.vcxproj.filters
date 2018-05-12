@@ -63,4 +63,38 @@
       <Filter>Assets</Filter>
     </Image>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.cpp" />
+    <ClCompile Include="al_rendererMain.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Common\job_system.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.h" />
+    <ClInclude Include="al_rendererMain.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Common\assertions.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\basictypes.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\constants.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\hlsltypes.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\job_system.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="al_renderer_TemporaryKey.pfx" />
+  </ItemGroup>
 </Project>
