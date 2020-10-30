@@ -4,7 +4,7 @@
 #include "text_buf.h"
 #include "graphics\imgui_render.h"
 #include "util.h"
-
+#include "imgui\imgui.h"
 static uint2 s_renderSize;
 static float s_aspectRatio;
 
@@ -445,8 +445,41 @@ void Graphics_Render()
 	WaitForPreviousFrame();
 }
 
+float3 operator-(float3 l, float3 r)
+{
+	return float3{ l.x - r.x, l.y - r.y, l.z - r.z };
+}
+
+float3 operator+(float3 l, float3 r)
+{
+	return float3{ l.x + r.x, l.y + r.y, l.z + r.z };
+}
+
+float dot(float3 l, float3 r)
+{
+	return l.x * r.x + l.y * r.y + l.z * r.z;
+}
+
+float3 operator*(float l, float3 r)
+{
+	return float3{ l * r.x, l * r.y, l * r.z };
+}
+
+float dist(float3 x, float3 s, float3 e)
+{
+	float3 L_v = e - s;
+	float3 v = s - x;
+	float k = -dot(L_v, v) / dot(L_v, L_v);
+	k = min(1.0f, max(0.0f, k));
+	return sqrt(dot(v + (k * L_v), v + (k * L_v)));
+}
+
 void Graphics_Update()
 {
+
+	ImGui::Text( "Distance: %f", dist(float3{ 0,-3,4 }, float3{ 0,-3,0 }, float3{ 5,-3,0 }));
+
+
 	g_ImguiRender_api.update();
 }
 

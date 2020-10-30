@@ -13,11 +13,11 @@
     <Filter Include="win32">
       <UniqueIdentifier>{541418ee-dd9f-455c-b6ac-b22b70be8912}</UniqueIdentifier>
     </Filter>
-    <Filter Include="graphics">
-      <UniqueIdentifier>{aa69136a-72b4-4bfd-bfe6-75dc1c7257e6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="imgui">
       <UniqueIdentifier>{87877314-b735-476d-9853-1c69e131142a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\graphics">
+      <UniqueIdentifier>{aa69136a-72b4-4bfd-bfe6-75dc1c7257e6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -40,7 +40,7 @@
       <Filter>win32</Filter>
     </ClCompile>
     <ClCompile Include="graphics.cpp">
-      <Filter>graphics</Filter>
+      <Filter>common\graphics</Filter>
     </ClCompile>
     <ClCompile Include="common\text_buf.cpp">
       <Filter>common</Filter>
@@ -58,7 +58,7 @@
       <Filter>imgui</Filter>
     </ClCompile>
     <ClCompile Include="graphics\imgui_render.cpp">
-      <Filter>graphics</Filter>
+      <Filter>common\graphics</Filter>
     </ClCompile>
     <ClCompile Include="common\basictypes.cpp">
       <Filter>common</Filter>
@@ -93,10 +93,10 @@
       <Filter>win32</Filter>
     </ClInclude>
     <ClInclude Include="render_resources.h">
-      <Filter>graphics</Filter>
+      <Filter>common\graphics</Filter>
     </ClInclude>
     <ClInclude Include="graphics.h">
-      <Filter>graphics</Filter>
+      <Filter>common\graphics</Filter>
     </ClInclude>
     <ClInclude Include="common\text_buf.h">
       <Filter>common</Filter>
@@ -126,7 +126,7 @@
       <Filter>imgui</Filter>
     </ClInclude>
     <ClInclude Include="graphics\imgui_render.h">
-      <Filter>graphics</Filter>
+      <Filter>common\graphics</Filter>
     </ClInclude>
     <ClInclude Include="common\util.h">
       <Filter>common</Filter>
@@ -136,21 +136,11 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\Win32Project1\Win32Project1.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\Win32Project1\small.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="..\Win32Project1\Win32Project1.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="imgui\README.md">
       <Filter>imgui</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="math\vec.h" />
   </ItemGroup>
 </Project>

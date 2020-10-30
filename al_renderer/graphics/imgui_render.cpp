@@ -191,8 +191,8 @@ static void ImguiRender_Render()
 	ID3D12GraphicsCommandList* const ctx = g_d3dCommandList.Get();
 
 	// Copy and convert all vertices into a single contiguous buffer
-	MappedUploadRange_s vtxRange{ drawData->TotalVtxCount * sizeof( ImDrawVert ) };
-	MappedUploadRange_s idxRange{ drawData->TotalIdxCount * sizeof( ImDrawIdx ) };
+	UploadBufferRange_s vtxRange; vtxRange.size = drawData->TotalVtxCount * sizeof(ImDrawVert);
+	UploadBufferRange_s idxRange; idxRange.size = drawData->TotalIdxCount * sizeof(ImDrawIdx);
 	Graphics_MapUploadData( g_uploadBufferAlloc_perFrameVtx, &vtxRange );
 	Graphics_MapUploadData( g_uploadBufferAlloc_perFrameVtx, &idxRange );
 

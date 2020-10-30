@@ -42,8 +42,8 @@ struct MappedRange_s
 
 	D3D12_GPU_VIRTUAL_ADDRESS gpuAddress;
 	void* data;
-};
 
+};
 struct UploadBufferRange_s : public MappedRange_s {};
 using UploadBufferAllocHandle_t = u32;
 extern const UploadBufferAllocHandle_t g_uploadBufferAlloc_perFrameVtx;
